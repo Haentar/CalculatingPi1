@@ -3,19 +3,19 @@
 #include <iostream>
 
 
-void main() {
+int main() {
 	//input the number of significant figures
 	int n;
 	std::cin >> n;
 	//compute pi via iterations,
 	int piapprox=0;
 	//variable for repeating in series
-	int m = 0;
-	while (m<4) 
+	
+	for(int m=0;m<4;m++) 
 	{
 //making the infinite series S4/(1+2n)
 		piapprox = piapprox + (-1 ^ (m))*(4 / (1 + 2*m));
-		m = m++;
+		
 		std::cout << piapprox << std::endl;
 	}
 	
